@@ -2,13 +2,15 @@
 
 > Tiny async fifo queue'in library
 
+[![Build Status](https://travis-ci.org/craig-mulligan/p-q.svg?branch=master)](https://travis-ci.org/craig-mulligan/p-q)
+
 ```
 npm i --save p-q
 ```
 
 ### Usage
 
-Pass in a processing function that returns a promise to the contructor.
+Pass in a processing function that returns a promise to the constructor.
 ```
 const Q = require('p-q');
 

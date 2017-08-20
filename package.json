@@ -1,6 +1,6 @@
 {
   "name": "p-q",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "tiny Fifo queue library",
   "main": "index.js",
   "scripts": {
