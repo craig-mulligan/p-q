@@ -11,7 +11,7 @@ npm i --save p-q
 ### Usage
 
 Pass in a processing function that returns a promise to the constructor.
-```
+``` javascript
 const Q = require('p-q');
 
 const q = new Q((msg) => {
@@ -24,7 +24,7 @@ const q = new Q((msg) => {
 ```
 
 Then add some data to the queue:
-```
+``` javascript
 q.add({
   foo: 'hii',
   bar: 'world'
@@ -32,7 +32,7 @@ q.add({
 ```
 
 Get events back:
-```
+``` javascript
 q.on('processed', data => {
   console.log(`${JSON.stringify(data)} was processed`);
 })
