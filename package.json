@@ -1,0 +1,29 @@
+{
+  "name": "p-q",
+  "version": "1.0.0",
+  "description": "tiny Fifo queue library",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write --single-quote ./*.js",
+    "test": "ava test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craig-mulligan/p-q.git"
+  },
+  "keywords": [
+    "queue",
+    "Promise",
+    "events"
+  ],
+  "author": "craig-mulligan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craig-mulligan/p-q/issues"
+  },
+  "homepage": "https://github.com/craig-mulligan/p-q#readme",
+  "devDependencies": {
+    "ava": "0.22.0",
+    "prettier": "1.5.3"
+  }
+}
