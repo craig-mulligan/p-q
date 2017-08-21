@@ -1,6 +1,6 @@
 {
   "name": "p-q",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "tiny fifo promise queue",
   "main": "index.js",
   "scripts": {
