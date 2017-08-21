@@ -1,15 +1,6 @@
-const util = require('util');
 const EventEmitter = require('events').EventEmitter;
-function Q(fn) {
-  EventEmitter.call(this);
-  this._q = [];
-  this._fn = fn;
-  this._busy = false;
-}
 
-util.inherits(Q, EventEmitter);
-
-Q.prototype.add = function(data) {
+function add(data) {
   this._q.push(data);
   this.emit('add', data);
   if (this._q.length === 1) {
@@ -17,11 +8,11 @@ Q.prototype.add = function(data) {
   }
 };
 
-Q.prototype.reset = function() {
+function reset() {
   this._busy = false;
 };
 
-Q.prototype.process = function() {
+function process() {
   if (this._q.length <= 0) {
     this.emit('empty');
     return;
@@ -49,8 +40,37 @@ Q.prototype.process = function() {
     });
 };
 
-Q.prototype.length = function() {
+function getLength() {
   return this._q.length;
 };
+
+function Q(fn) {
+  const o = Object.create(EventEmitter.prototype, {
+    _q: {
+      value: [],
+    },
+    _fn: {
+      value: fn,
+    },
+    _busy: {
+      value: false,
+    },
+    add: {
+      value: add,
+    },
+    process: {
+      value: process,
+    },
+    length: {
+      value: getLength
+    },
+    reset: {
+      value: reset
+    }
+  });
+
+  EventEmitter.call(this);
+  return o;
+}
 
 module.exports = Q;

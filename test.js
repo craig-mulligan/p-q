@@ -3,7 +3,7 @@ const Q = require('./index.js');
 let q;
 
 test.beforeEach(t => {
-  q = new Q(msg => {
+  q = Q(msg => {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
         resolve(msg);

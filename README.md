@@ -13,9 +13,9 @@ npm i --save p-q
 Pass in a processing function that returns a promise to the constructor.
 ``` javascript
 
-const Q = require('p-q');
+const PQ = require('p-q');
 
-const q = new Q((msg) => {
+const q = PQ((msg) => {
   return new Promise(function(resolve, reject) {
     setTimeout(function () {
       resolve(msg);
@@ -43,7 +43,7 @@ q.on('processed', data => {
 })
 
 q.on('empty', _ => {
-  console.log('queue is empy');
+  console.log('queue is empty');
 })
 
 q.on('error', err => {
