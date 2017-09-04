@@ -1,6 +1,6 @@
 # p-q
 
-> Tiny promise fifo queue
+> Tiny fifo promise queue
 
 [![Build Status](https://travis-ci.org/craig-mulligan/p-q.svg?branch=master)](https://travis-ci.org/craig-mulligan/p-q)
 
