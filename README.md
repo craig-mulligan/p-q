@@ -2,7 +2,7 @@
 
 > Tiny fifo promise queue
 
-[![Build Status](https://travis-ci.org/craig-mulligan/p-q.svg?branch=master)](https://travis-ci.org/craig-mulligan/p-q)
+[![Build Status](https://travis-ci.org/hobochild/p-q.svg?branch=master)](https://travis-ci.org/hobochild/p-q)
 
 ```
 npm i --save p-q
